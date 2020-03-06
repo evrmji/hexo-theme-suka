@@ -11,10 +11,10 @@
                 </div>
                 <div class="card-body">
                     <% if (theme.toc.enable && page.toc !== false) ) { 
-                            const toc_obj = toc(page.content, {
+                            var toc_obj = toc(page.content, {
                             class: 'post-toc',
                             list_number: theme.toc.list_number
-                           });
+                           })
                         if (toc_obj.length > 0) { %>
                             <div id="post-toc"><%- toc_obj %></div>
                         <% }} %>
