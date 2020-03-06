@@ -11,6 +11,7 @@
                 </div>
 
                 <div class="card-body">
+                    <aside>
                     <% if (theme.toc.enable && (page.toc !== false) ) {  
                         const toc_obj = toc(page.content, {
                             class: 'post-toc',
@@ -20,7 +21,7 @@
                             <div id="post-toc"><%- toc_obj %></div>
                         <% }
                     } %>
-
+                    </aside>
                     <article id="post-content">
                         <%- page.content %>
                     </article>
