@@ -572,14 +572,30 @@ a.category-link {
 /* Post TOC */
 
 #post-toc {
-    position: relative;
-    z-index: 0;
-    max-width: 890px;
-    margin-right: auto !important;
-    margin-left: auto !important;
-    text-align: right;
-    line-height: .7rem;
-    font-size: .625rem;
+    border-right: 1px solid rgba(0,0,0,.07);
+    overflow-y: auto;
+    padding: 40px 0 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: transform .25s ease-out;
+    width: 300px;
+    z-index: 20;
+}
+
+#post-toc::-webkit-scrollbar {
+    width: 4px;
+}
+#post-toc:hover::-webkit-scrollbar-thumb {
+    background: hsla(0,0%,50%,.4);
+}
+#post-toc::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 4px;
+}
+#post-toc:hover::-webkit-scrollbar-track {
+    background: hsla(0,0%,50%,.1);
 }
 
 #post-toc>ol {
@@ -605,6 +621,7 @@ a.category-link {
 #post-toc .post-toc-child {
     margin: .2rem 0 .2rem .5rem
 }
+
 
 #post-card .pagination {
     font-size: .7rem;
